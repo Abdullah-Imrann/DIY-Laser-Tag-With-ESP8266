@@ -48,4 +48,4 @@ Circuit Diagram & Wiring
 There is one unified circuit diagram, since a single ESP8266 handles both gun and vest logic.
 
 Circuit diagram & wiring photos location:
-'hardware/circuit-diagram'
+`hardware/circuit-diagram`
