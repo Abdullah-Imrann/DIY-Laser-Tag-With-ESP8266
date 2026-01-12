@@ -4,8 +4,9 @@ A low-cost, open-source DIY Laser Tag system built using a single ESP8266 that h
 
 This project is designed so anyone can build, understand, and modify a laser tag system at home without unnecessary complexity or expensive components.
 
-Key Features
+100% of the code in this project is written by AI
 
+Key Features
 - Single ESP8266 controls both gun and vest
 - IR-based shooting & hit detection (safe, no lasers)
 - Wi-Fi enabled game logic
@@ -14,11 +15,15 @@ Key Features
 - Designed with cheap, easily available components
 
 System Overview
-
 - Pressing the trigger fires an IR signal from the gun
 - The same ESP8266 listens for incoming IR hits via the vest receiver
 - Game events are processed locally
 - Data is sent over Wi-Fi to a web app for live score updates
+
+The Website
+- Has different game modes (Survival Mode, Race Against The Clock, etc.)
+- Tracks each users score in realtime
+- Plays sound effects and important announcements through the speaker (ex. [Player 1's name] was just shot, or [Player 2's name] has only 2 lives left)
 
 This single-ESP approach reduces:
 - Wiring complexity
@@ -27,7 +32,6 @@ This single-ESP approach reduces:
 - Debugging effort
 
 Power System
-
 - 4× Rechargeable NiMH AA batteries
 - 1.2 V each, 1300 mAh
 - Total nominal voltage: ~4.8 V
@@ -39,7 +43,7 @@ Chosen for:
 - Stable current delivery for ESP8266
 
 Components Required
-A concise and accurate list is available here:
+A concise and accurate list along with cost is available here:
 `hardware/components-list.md`
 
 Circuit Diagram & Wiring
@@ -49,3 +53,6 @@ There is one unified circuit diagram (since a single ESP8266 handles both gun an
 C++ Code For esp8266:
 `firmware/p1/p1.ino`
 `firmware/p2/p2.ino`
+
+HTML, CSS and JS code for the website:
+`web-app`
