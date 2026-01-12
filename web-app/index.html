@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laser Tag Arena - Scoreboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Setup Screen -->
+    <div id="setupScreen" class="screen active">
+        <div class="screen-content">
+            <div class="setup-container">
+                <h1 class="main-title">⚡ LASER TAG ARENA ⚡</h1>
+                <div class="setup-form">
+                    <div class="input-group">
+                        <label for="player1Name" class="label-green">Player 1 (Green)</label>
+                        <input type="text" id="player1Name" class="input-field input-green" placeholder="Enter Player 1 name" maxlength="20">
+                    </div>
+                    <div class="input-group">
+                        <label for="player2Name" class="label-red">Player 2 (Red)</label>
+                        <input type="text" id="player2Name" class="input-field input-red" placeholder="Enter Player 2 name" maxlength="20">
+                    </div>
+                    <button id="continueBtn" class="btn-primary btn-glow">CONTINUE</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Mode Selection Screen -->
+    <div id="modeSelectionScreen" class="screen">
+        <div class="screen-content">
+            <div class="mode-selection-container">
+                <h1 class="main-title">SELECT GAME MODE</h1>
+                <div class="mode-buttons">
+                    <!-- Time Limit Mode -->
+                    <div class="mode-group">
+                        <button class="mode-btn mode-time" data-mode="time">
+                            <span class="mode-icon">🕒</span>
+                            <span class="mode-title">TIME LIMIT</span>
+                            <span class="mode-subtitle">Race Against the Clock</span>
+                        </button>
+                        <div class="mode-options" id="timeOptions" style="display: none;">
+                            <button class="option-btn" data-duration="15">15 Minutes</button>
+                            <button class="option-btn" data-duration="10">10 Minutes</button>
+                            <button class="option-btn" data-duration="5">5 Minutes</button>
+                            <button class="option-btn" data-duration="2">2 Minutes</button>
+                        </div>
+                    </div>
+
+                    <!-- Hits Target Mode -->
+                    <div class="mode-group">
+                        <button class="mode-btn mode-hits" data-mode="hits">
+                            <span class="mode-icon">🎯</span>
+                            <span class="mode-title">HITS TARGET</span>
+                            <span class="mode-subtitle">First to Reach Goal</span>
+                        </button>
+                        <div class="mode-options" id="hitsOptions" style="display: none;">
+                            <button class="option-btn" data-hits="5">5 Hits / 25 Points</button>
+                            <button class="option-btn" data-hits="10">10 Hits / 50 Points</button>
+                            <button class="option-btn" data-hits="15">15 Hits / 75 Points</button>
+                        </div>
+                    </div>
+
+                    <!-- Limited Lives Mode -->
+                    <div class="mode-group">
+                        <button class="mode-btn mode-lives" data-mode="lives">
+                            <span class="mode-icon">❤️</span>
+                            <span class="mode-title">LIMITED LIVES</span>
+                            <span class="mode-subtitle">Survival Mode</span>
+                        </button>
+                        <div class="mode-options" id="livesOptions" style="display: none;">
+                            <button class="option-btn" data-lives="2">2 Lives</button>
+                            <button class="option-btn" data-lives="5">5 Lives</button>
+                            <button class="option-btn" data-lives="10">10 Lives</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Screen -->
+    <div id="gameScreen" class="screen">
+        <div class="game-container">
+            <!-- Game Header -->
+            <div class="game-header">
+                <div class="game-mode-display" id="gameModeDisplay">TIME LIMIT</div>
+                <div class="game-status" id="gameStatus">
+                    <div class="timer-display" id="timerDisplay" style="display: none;">00:00</div>
+                    <div class="hits-progress" id="hitsProgress" style="display: none;">0 / 0 hits</div>
+                </div>
+            </div>
+
+            <h1 class="game-title">⚡ LASER TAG SCOREBOARD ⚡</h1>
+            
+            <div class="scoreboard">
+                <!-- Player 1 Card -->
+                <div class="player-card player-1-card" id="player1Card">
+                    <div class="player-header">
+                        <div class="player-name" id="player1NameDisplay">Player 1</div>
+                        <div class="lives-display" id="player1Lives" style="display: none;"></div>
+                    </div>
+                    <div class="score-container">
+                        <div class="score-label">SCORE</div>
+                        <div class="score-value" id="player1Score">0</div>
+                    </div>
+                    <div class="glow-effect glow-green"></div>
+                    <div class="laser-beam laser-green"></div>
+                </div>
+
+                <!-- VS Divider -->
+                <div class="vs-divider">
+                    <span class="vs-text">VS</span>
+                </div>
+
+                <!-- Player 2 Card -->
+                <div class="player-card player-2-card" id="player2Card">
+                    <div class="player-header">
+                        <div class="player-name" id="player2NameDisplay">Player 2</div>
+                        <div class="lives-display" id="player2Lives" style="display: none;"></div>
+                    </div>
+                    <div class="score-container">
+                        <div class="score-label">SCORE</div>
+                        <div class="score-value" id="player2Score">0</div>
+                    </div>
+                    <div class="glow-effect glow-red"></div>
+                    <div class="laser-beam laser-red"></div>
+                </div>
+            </div>
+
+            <!-- Hit Log -->
+            <div class="hit-log-container">
+                <div class="hit-log-title">HIT LOG</div>
+                <div class="hit-log" id="hitLog"></div>
+            </div>
+
+            <!-- Reset Button -->
+            <button id="resetBtn" class="btn-secondary">RESET GAME</button>
+        </div>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script type="module" src="script.js"></script>
+</body>
+</html>
