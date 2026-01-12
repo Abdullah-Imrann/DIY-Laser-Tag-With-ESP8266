@@ -6,8 +6,8 @@
 #define WIFI_PASSWORD "********"
 
 // -------- FIREBASE --------
-#define FIREBASE_HOST "joko-cards-default-rtdb.asia-southeast1.firebasedatabase.app"
-#define FIREBASE_AUTH "AIzaSyC-D3ZdFb7qeafcbBXBKgjFNBqlD5TXjkQ"
+#define FIREBASE_HOST "*****************firebasedatabase.app"
+#define FIREBASE_AUTH "**************************************"
 
 // -------- PINS --------
 #define TSOP_PIN      D6
