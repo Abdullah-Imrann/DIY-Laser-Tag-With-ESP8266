@@ -6,7 +6,7 @@
 #define WIFI_PASSWORD "********"
 
 // -------- FIREBASE --------
-#define FIREBASE_HOST "*****************firebasedatabase.app"
+#define FIREBASE_HOST "*****************firebasedatabase.app" //Go to firebase.google.com, create a new project, go to project settings and find the firebaseConfig
 #define FIREBASE_AUTH "**************************************"
 
 // -------- PINS --------
