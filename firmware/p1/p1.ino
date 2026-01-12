@@ -2,8 +2,8 @@
 #include <FirebaseESP8266.h>
 
 // -------- WIFI --------
-#define WIFI_SSID     "aaidlink_EXT"
-#define WIFI_PASSWORD "qaswa058"
+#define WIFI_SSID     "********"
+#define WIFI_PASSWORD "********"
 
 // -------- FIREBASE --------
 #define FIREBASE_HOST "joko-cards-default-rtdb.asia-southeast1.firebasedatabase.app"
