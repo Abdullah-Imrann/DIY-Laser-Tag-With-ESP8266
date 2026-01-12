@@ -56,3 +56,6 @@ C++ Code For esp8266:
 
 HTML, CSS and JS code for the website:
 `web-app`
+
+Cardboard Casing (a very rough sketch of the guns design is created, "it is not for 3D printing", only for reference to build with cardboard):
+`enclosure/cardboard-design.stl`
