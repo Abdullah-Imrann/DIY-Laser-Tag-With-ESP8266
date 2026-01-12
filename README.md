@@ -39,13 +39,13 @@ Chosen for:
 - Stable current delivery for ESP8266
 
 Components Required
-
 A concise and accurate list is available here:
 `hardware/components-list.md`
 
 Circuit Diagram & Wiring
+There is one unified circuit diagram (since a single ESP8266 handles both gun and vest logic), here:
+`hardware/circuit-diagram.png`
 
-There is one unified circuit diagram, since a single ESP8266 handles both gun and vest logic.
-
-Circuit diagram & wiring photos location:
-`hardware/circuit-diagram`
+C++ Code For esp8266:
+`firmware/p1/p1.ino`
+`firmware/p2/p2.ino`
